@@ -1,0 +1,22 @@
+<div class="jumbotron bg-black text-dark p-3">
+  <h1 class="display-4 text-warning text-center">Bienvenue chez BarroLux!</h1>
+  <p class="lead text-light text-center">Explorez notre collection exclusive de montres de luxe. Cliquez sur une montre pour voir les détails.</p>
+</div>
+<div class="container mt-5 d-flex gap-3 ">
+  <div class="row width-75">
+    <div class="col-md-4" *ngFor="let produit of produits">
+      <div class="card text-white bg-dark mb-3" (click)="onSelect(produit)">
+
+        <div class="card-body">
+          <h5 class="card-title text-warning">{{ produit.titre | uppercase }}</h5>
+          <p class="card-text text-light">{{ produit.prix | currency:'EUR':'symbol':'1.2-2' }}</p>
+          <p class="card-text text-light">{{ produit.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!selectedProduit" class="lert bg-black">
+<img src="https://img.freepik.com/vecteurs-libre/arriere-plans-noirs-degrades-cadres-dores_23-2149140162.jpg?ga=GA1.1.1720515201.1722132792&semt=ais_user" alt="">
+  </div>
+  <app-detail-prod [produit]="selectedProduit" *ngIf="selectedProduit"></app-detail-prod>
+</div>

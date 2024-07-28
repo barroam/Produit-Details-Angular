@@ -1,0 +1,23 @@
+.card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card-body {
+  background-color: black;
+}
+.card-title, .card-text {
+  color: yellow;
+}
+.lert{
+  padding: 0.1rem;
+  width: 36rem;
+height: 28rem;
+}
+img{
+  width: 100%;
+  height:100% ;
+  object-fit: cover;
+}
