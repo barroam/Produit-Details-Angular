@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DetailProdComponent } from '../detail-prod/detail-prod.component';
 
-
 @Component({
   selector: 'app-prod',
   standalone: true,
@@ -10,6 +9,7 @@ import { DetailProdComponent } from '../detail-prod/detail-prod.component';
   templateUrl: './prod.component.html',
   styleUrls: ['./prod.component.css']
 })
+
 export class ProdComponent {
 
   produits = [
